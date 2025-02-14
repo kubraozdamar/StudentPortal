@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add Course</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link href="css/sidebar.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body id="body-pd">
+<header class="header" id="header">
+    <div class="header_toggle"> <i class='bx bx-menu' id="header-toggle"></i> </div>
+</header>
+<div class="l-navbar" id="nav-bar" style="background-color: #212529">
+    <nav class="nav" >
+        <div> <a href="#" class="nav_logo"> <img src="/img/logo.svg" width="20px" class="" alt="..."> <span class="nav_logo-name">ICES4HU</span> </a>
+            <div class="nav_list"> <a onclick="location.href='/main_page_admin';" class="nav_link"> <i class='bx bx-grid-alt nav_icon'></i> <span class="nav_name">General</span> </a>
+                <a onclick="location.href='/approve_user';" class="nav_link"> <i class="fa-solid fa-user-check"></i> <span class="nav_name">Approve User</span> </a>
+                <a onclick="location.href='/courses';" class="nav_link active"> <i class='bx bx-book nav_icon'></i> <span class="nav_name">Manage Courses</span> </a>
+                <a onclick="location.href='/admin_register';" class="nav_link"><i class="fa-solid fa-chalkboard-user"></i> <span class="nav_name">Register Instructor</span> </a>
+                <a onclick="location.href='/edit_account';" class="nav_link"> <i class='fa-solid fa-user nav_icon'></i> <span class="nav_name">Edit Account</span> </a>
+            </div>
+        </div>
+        <a href="/" onclick="localStorage.clear()" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">Sign Out</span> </a>
+    </nav>
+</div>
+<!--Container Main start-->
+<div class="height-100 bg-light" style="text-align: center">
+    <div class="input-group input-format mt-5 mb-2 mx-auto w-50" style="min-width: 400px">
+        <span class="input-group-text col-3" id="name">Name</span>
+        <input name="name" type="text" class="form-control col-9" placeholder="Enter course name..." aria-label="Name" aria-describedby="name">
+    </div>
+    <div class="input-group input-format mb-2 mx-auto w-50" style="min-width: 400px">
+        <span class="input-group-text col-3" id="quota">Quota</span>
+        <input name="quota"type="text" class="form-control col-9" placeholder="Enter course quota..." aria-label="Quota" aria-describedby="quota">
+    </div>
+    <div class="input-group input-format mb-2 mx-auto w-50" style="min-width: 400px">
+        <span class="input-group-text col-3" id="akts">AKTS</span>
+        <input name="akts"type="text" class="form-control col-9" placeholder="Enter course AKTS..." aria-label="AKTS" aria-describedby="akts">
+    </div>
+    <div class="input-group input-format mb-2 mx-auto w-50" style="min-width: 400px">
+        <span class="input-group-text col-3" id="nameCode">Course Code</span>
+        <input name="code"type="text" class="form-control col-9" placeholder="Enter course code..." aria-label="Code" aria-describedby="code">
+    </div>
+    <div class="input-group input-format mb-2 mx-auto w-50" style="min-width: 400px">
+        <span class="input-group-text col-3" >Instructor</span>
+        <select class="js-example-basic-single  form-control col-9" id="instructor">
+
+        </select>
+    </div>
+    <div class="input-group input-format mb-2 mx-auto w-50" style="min-width: 400px">
+        <span class="input-group-text col-3" id="location">Location</span>
+        <input name="location_info"type="text" class="form-control col-9" placeholder="Enter course location..." aria-label="Location" aria-describedby="location">
+    </div>
+    <div class="input-group input-format mb-2 mx-auto w-50" style="min-width: 400px">
+        <span class="input-group-text col-3" id="startTime">Start Time</span>
+        <input name="start_time"type="text" class="form-control col-9" placeholder="Enter course start time..." aria-label="Start Time" aria-describedby="startTime">
+    </div>
+    <div class="input-group input-format mb-5 mx-auto w-50" style="min-width: 400px">
+        <span class="input-group-text col-3" id="endTime">End Time</span>
+        <input name="end_time"type="text" class="form-control col-9" placeholder="Enter course end time..." aria-label="End Time" aria-describedby="endTime">
+    </div>
+    <p id="error" style="color: #ec1c24"></p>
+    <button class="btn btn-login btn-primary btn-lg btn-block mx-2" type="submit"><i class="fa-solid fa-paper-plane" style="color: white;"></i> | Submit</button>
+
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<script src="js/show_instructor.js"></script>
+<script src="js/sidebar.js"></script>
+<script src="js/add_course.js"></script>
+</body>
+</html>
